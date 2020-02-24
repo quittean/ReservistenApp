@@ -1,5 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+
+import StartScreen from './screens/StartScreen';
+import BwScreen from './screens/BwScreen';
+import CalScreen from './screens/CalScreen';
+import BoerseScreen from './screens/BoerseScreen';
 
 export default function App() {
   return (
