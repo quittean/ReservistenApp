@@ -1,20 +1,13 @@
-import React from 'react';
-import {View, Text, Button, InputText, StyleSheet} from 'react-native';
+import React, { Component } from 'react';
+import { Button, View, Text } from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
 
-const BwScreen = props => {
+export default class CalScreen extends Component {
+  render() {
     return (
-        <View style={style.screen}>
-
-        </View>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Blog-Einträge und co</Text>
+      </View>
     )
-};
-
-const style = StyleSheet.create({
-    screen: {
-        flex: 1,
-        padding: 10,
-        alignmentItems: 'center'
-    }
-});
-
-export default BwScreen;
+  }
+}
