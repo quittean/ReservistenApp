@@ -9,30 +9,30 @@ export default class StartScreen extends Component {
     return (
       <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
         <View style={{alignItems: ''}}>
-          <Text>Die Reservisten App</Text>
+          <Text style={{width: '100%', fontSize: '3rem'}}>Die Reservisten App</Text>
         </View>
 
-        <View style={{flex: 1, flexDirection: 'row'}}>
+        <View style={{flexDirection: 'row', borderWidth: 2, width: '80%', height: '40%', justifyContent: "space-evenly"}}>
          <TouchableOpacity onPress= {() => this.props.navigation.navigate('Bw')}>
             <Image style={styles.icon} source={require('../assets/iconbw.png')} />
-            <Text>Die Reserve</Text>
+            <Text style={styles.buttonText}>Die Reserve</Text>
           </TouchableOpacity>
           
           <TouchableOpacity onPress= {() => this.props.navigation.navigate('Boerse')}>
             <Image style={styles.icon} source={require('../assets/iconboerse.png')} />
-            <Text>Stellenangebote</Text>
+            <Text style={styles.buttonText}>Stellenangebote</Text>
           </TouchableOpacity> 
           </View>
 
-          <View style={{flex: 1, flexDirection: 'row'}}>
+          <View style={{flexDirection: 'row', borderWidth: 2, width: '80%', height: '40%', justifyContent: "space-evenly"}}>
           <TouchableOpacity onPress= {() => this.props.navigation.navigate('Cal')}>
             <Image style={styles.icon} source={require('../assets/iconcal.png')} />
-            <Text>Veranstaltungskalender</Text>
+            <Text style={styles.buttonText}>Veranstaltungen</Text>
           </TouchableOpacity>
 
           <TouchableOpacity onPress= {() => { Linking.openURL('https://bundeswehr.community')}}>
             <Image style={styles.icon} source={require('../assets/iconcommunity.png')} />
-            <Text>Bundeswehr Community</Text>
+            <Text style={styles.buttonText}>Bw Community</Text>
           </TouchableOpacity>
           </View>
       </View>
@@ -43,6 +43,10 @@ export default class StartScreen extends Component {
 const styles = StyleSheet.create({
   icon: {
     width: 100,
-    height: 50
+    height: 50,
+    alignSelf: "center"
+  },
+  buttonText: {
+    fontSize: '2rem'
   },
 });
