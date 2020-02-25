@@ -338,8 +338,10 @@ class Spider(threading.Thread):
 
     def parse_slider_articles(self, result_dict):
 
+        ac = ActionChains(self.br)
         button = self.br.find_elements_by_xpath("//button[@data-js-item='load-more-btn']")
         ac.move_to_element(button[0]).click().perform()
+        soup = self.parse_html_to_bs(self.br.page_source)
         soup.find_all("div",{"class":"teaser-collage__teaser-wrapper"})
         if result_dict['page_source']:
             bsoup = self.parse_html_to_bs(result_dict['page_source'])
