@@ -11,7 +11,7 @@ export default class StartScreen extends Component {
         
         <Text style={{}}>Die Reservisten App</Text>
 
-         <TouchableOpacity onPress= {() => this.props.navigation.navigate('Bw')}>
+         <TouchableOpacity onPress= {() => this.props.navigation.navigate('Die Reserve der Bundeswehr')}>
             <Image style={styles.button} source={require('../assets/iconbw.png')} />
             <Text>Die Reserve</Text>
           </TouchableOpacity>
