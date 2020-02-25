@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -21,15 +21,16 @@ function App() {
       <Stack.Navigator initialRouteName="Start">
         <Stack.Screen name="Start" component={StartScreen} />
         <Stack.Screen name="Cal" component={CalScreen} />
-        <Stack.Screen name="Bw" component={BwScreen} />
+        <Stack.Screen name="Die Reserve der Bundeswehr" component={BwScreen} />
         <Stack.Screen name="Boerse" component={BoerseScreen} />
-        <Stack.Screen name="Mensch_BwScreen" component={MenschScreen} />
-        <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} />
-        <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} />
-        <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} />
+        <Stack.Screen name="Der Mensch" component={MenschScreen} />
+        <Stack.Screen name="Der Auftrag" component={AuftragScreen} />
+        <Stack.Screen name="Die Organisation" component={OrganisationScreen} />
+        <Stack.Screen name="Reservist werden!" component={ReservistScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
 }
+
 
 export default App;
