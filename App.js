@@ -7,6 +7,10 @@ import StartScreen from './screens/StartScreen';
 import CalScreen from './screens/CalScreen';
 import BwScreen from './screens/BwScreen';
 import BoerseScreen from './screens/BoerseScreen';
+import MenschScreen from './screens/MenschScreen';
+import AuftragScreen from './screens/AuftragScreen';
+import OrganisationScreen from './screens/OrganisationScreen';
+import ReservistScreen from './screens/ReservistScreen';
 
 
 const Stack = createStackNavigator();
@@ -19,6 +23,10 @@ function App() {
         <Stack.Screen name="Cal" component={CalScreen} />
         <Stack.Screen name="Bw" component={BwScreen} />
         <Stack.Screen name="Boerse" component={BoerseScreen} />
+        <Stack.Screen name="Mensch_BwScreen" component={MenschScreen} />
+        <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} />
+        <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} />
+        <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

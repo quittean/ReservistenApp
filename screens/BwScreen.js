@@ -1,13 +1,32 @@
 import React, { Component } from 'react';
-import { Button, View, Text } from 'react-native';
-import { createStackNavigator, createAppContainer } from 'react-navigation';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import { Button, View, Text} from 'react-native';
 
-export default class CalScreen extends Component {
+
+export default class BwScreen extends Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View>
+      <View>
+        <Button
+          title="Auftrag"
+          onPress={() => this.props.navigation.navigate('Auftrag_BwScreen')}/>
+          <Button
+          title="Organisation"
+          onPress={() => this.props.navigation.navigate('Organisation_BwScreen')}/>
+          <Button
+          title="Mensch"
+          onPress={() => this.props.navigation.navigate('Mensch_BwScreen')}/>
+          <Button
+          title="Reservist werden"
+          onPress={() => this.props.navigation.navigate('Reservist_BwScreen')}/>
+      </View>
+      <View>
         <Text>Blog-Einträge und co</Text>
       </View>
-    )
+      </View>
+    );
   }
 }
