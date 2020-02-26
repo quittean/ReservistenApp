@@ -12,6 +12,7 @@ import MenschScreen from './screens/MenschScreen';
 import AuftragScreen from './screens/AuftragScreen';
 import OrganisationScreen from './screens/OrganisationScreen';
 import ReservistScreen from './screens/ReservistScreen';
+import LinkAuftragBwScreen from './screens/Link_Auftrag_BwScreen';
 
 
 const Stack = createStackNavigator();
@@ -20,14 +21,15 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Start">
-        <Stack.Screen name="Start" component={StartScreen} />
-        <Stack.Screen name="Cal" component={CalScreen} />
-        <Stack.Screen name="Bw" component={BwScreen} />
-        <Stack.Screen name="Boerse" component={BoerseScreen} />
-        <Stack.Screen name="Mensch_BwScreen" component={MenschScreen} />
-        <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} />
-        <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} />
-        <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} />
+        <Stack.Screen name="Start" component={StartScreen} options={{title: 'Die Reservisten-App'}}/>
+        <Stack.Screen name="Cal" component={CalScreen} options={{title: 'Veranstaltungen'}}/>
+        <Stack.Screen name="Bw" component={BwScreen} options={{title: 'Die Reserve'}}/>
+        <Stack.Screen name="Boerse" component={BoerseScreen} options={{title: 'Stellenbörse'}}/>
+        <Stack.Screen name="Mensch_BwScreen" component={MenschScreen} options={{title: 'Die Menschen in der Reserve'}}/>
+        <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} options={{title: 'Der Auftrag der Reserve'}}/>
+        <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} options={{title: 'Organisation'}}/>
+        <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} options={{title: 'Reservist werden!'}}/>
+        <Stack.Screen name="Link_Auftrag_BwScreen" component={LinkAuftragBwScreen} options={{title: 'Mehr Infos zum Auftrag'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -30,14 +30,14 @@ export default class AuftragScreen extends Component {
 
           <Text style={{color:'white', paddingTop:10, fontWeight:'bold', fontSize:15, textAlign:'center'}}>Heimatschutz – „Dienst an der Allgemeinheit“</Text>
            
-            <Text style={{color:'white', paddingTop:10, textAlign:'center'}}> 
+            <Text style={{color:'white', paddingTop:10, textAlign:'center', padding:20}}> 
               Regionale Sicherungs- und Unterstützungskräfte bieten allen interessierten und geeigneten Reservistinnen und Reservisten Chancen des Engagements. Sie arbeiten Seite an Seite mit aktiven Soldatinnen und Soldaten zusammen, um den Auftrag der Reserve zu erfüllen. Der Aufgabenschwerpunkt Heimatschutz bei Katastrophen und schweren Unglücken stärkt das Prinzip „Dienst an der Allgemeinheit“ (Wir.Dienen.Deutschland.).
               Dabei kommt den Soldatinnen und Soldaten der Regionalen Sicherungs- und Unterstützungskräfte ihre Ortskenntnis besonders zugute, denn die Einheiten wurden flächendeckend in ganz Deutschland aufgestellt.
             </Text>
 
-        <View>
+        <View style={{borderStyle:'solid', borderColor:'white', borderWidth:1, justifyContent:'center', alignItems:'center', padding:10}}>
           <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Auftrag_BwScreen')}>
-            <Text style={{textAlign:'center',color:'black'}}>Für noch mehr Informationen schauen Sie einfach hier vorbei</Text>
+            <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Für noch mehr Informationen schauen Sie einfach hier vorbei</Text>
           </TouchableOpacity>
         </View>      
      </View>
