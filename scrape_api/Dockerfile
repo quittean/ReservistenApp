@@ -15,6 +15,12 @@ USER scraper
 ENV ENVIRONMENT production
 
 USER root
+
+RUN echo "#!/bin/bash" > docker-entrypoint.sh
+RUN echo "gunicorn --bind 0.0.0.0:6050 wsgi:app" >> docker-entrypoint.sh
+
 RUN chmod +x docker-entrypoint.sh && cp docker-entrypoint.sh /usr/local/bin/ 
+
+USER scraper
 
 ENTRYPOINT ["docker-entrypoint.sh"]
