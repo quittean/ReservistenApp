@@ -14,7 +14,32 @@ export default class LinkAuftragBwScreen extends Component {
         return (
         <WebView
             source={{uri: 'https://www.bundeswehr.de/de/ueber-die-bundeswehr/die-reserve-der-bundeswehr/auftrag-der-reserve-der-bundeswehr'}}
-            style={{marginTop: 20}}
+            ref={c => this._webview = c}
+            renderLoading={this.renderLoading}
+            startInLoadingState
+            javaScriptEnabled={true}
+            injectedJavaScript={`
+            function removeElementsByClass(className){
+                var elements = document.getElementsByClassName(className);
+                while(elements.length > 0){
+                    elements[0].parentNode.removeChild(elements[0]);
+                }
+            }
+            removeElementsByClass("footer");
+            var main = document.getElementById("r-main");
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+            main.removeChild(main.lastChild);
+
+            document.getElementById("r-mainmenu").remove();
+            `}
         />
         )
     }

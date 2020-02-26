@@ -14,7 +14,14 @@ export default class BoerseScreen extends Component {
         return (
         <WebView
             source={{uri: 'https://bewerbung.bundeswehr-karriere.de/erece/portal/index.html#/JobList/milGroup/TwoColumnsMidExpanded/?json=%257B%2522Langu%2522:%2522D%2522,%2522SearchCategory%2522:%255B%25220022%2522%255D%257D'}}
-            style={{marginTop: 20}}
+            ref={c => this._webview = c}
+            javaScriptEnabled={true}
+            injectedJavaScript={`           
+            document.getElementById("bwComponentContainer").setAttribute("style", "height:648px");
+            document.getElementById("bwMobileHeader").remove();
+            `}
+            renderLoading={this.renderLoading}
+            startInLoadingState
         />
         )
     }

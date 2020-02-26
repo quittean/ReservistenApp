@@ -23,8 +23,14 @@ export default class CalScreen extends Component {
           removeElementsByClass("sidebar-widget sidebar-widget--veranstaltungen");
           removeElementsByClass("footer");
           removeElementsByClass("sticky-nav tab-nav text-uppercase");
-          removeElementsByClass("slider slider--state slider--teaser slick-initialized slick-slider");
           removeElementsByClass("widget widget--social");
+          removeElementsByClass("btn btn-block btn--arrow text-uppercase btn--blue btn--big");
+          var headers = document.getElementsByClassName("article__content")[0].getElementsByTagName("h3");
+          for (i = 0; i < headers.length; i++) {
+            if (headers[i].textContent == "Veranstaltungsanmeldung"){
+              headers[i].parentNode.removeChild(headers[i]);
+            };
+          };
           `}
       />
     )
