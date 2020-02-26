@@ -3,11 +3,13 @@ import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { ImageBackground, TouchableOpacity, Button, View, Text} from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 
 export default class BwScreen extends Component {
   render() {
     return (
+      <ScrollView>
       <ImageBackground source={require('../assets/background.jpg')} style={{width: '100%', height: '100%'}}>
       <View style={{padding: 20}}>
 
@@ -40,13 +42,14 @@ export default class BwScreen extends Component {
            </TouchableOpacity> 
           </View>
         </View>
-     
-      
-      <View>
+
+        <View>
         <Text style={{color:'white'}}>Blog-Einträge und co</Text>
+        </View>
+        
       </View>
-     </View>
-     </ImageBackground>
+      </ImageBackground>
+      </ScrollView>
     );
   }
 }
