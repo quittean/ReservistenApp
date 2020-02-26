@@ -31,8 +31,8 @@ export default class BwScreen extends Component {
 
         <View style={{justifyContent:'space-evenly',flexDirection: 'row', paddingTop:20, minheight: 60, height: 70}}>
           <View style={{justifyContent:'center',backgroundColor:'white',alignItems: 'center', padding: 10, width: '40%', borderColor:'black', borderWidth:1}}>
-            <TouchableOpacity style={{}} onPress= {() => this.props.navigation.navigate('Mensch_BwScreen')}>
-            <Text style={{textAlign:'center',color:'black'}}>Der Mensch</Text>
+            <TouchableOpacity style={{}} onPress= {() => this.props.navigation.navigate('Link_Menschen_BwScreen')}>
+            <Text style={{textAlign:'center',color:'black'}}>Die Menschen</Text>
             </TouchableOpacity> 
           </View>
 
@@ -43,10 +43,10 @@ export default class BwScreen extends Component {
           </View>
         </View>
 
-        <View>
+        <View style={{height:700, justifyContent:'center', alignItems:'center'}}>
         <Text style={{color:'white'}}>Blog-Einträge und co</Text>
         </View>
-        
+
       </View>
       </ImageBackground>
       </ScrollView>
