@@ -6,15 +6,17 @@ from bs4 import BeautifulSoup as bs
 import traceback
 import time
 import re
+from selenium.webdriver import ActionChains
 from lxml.html.diff import htmldiff
 from selenium.common.exceptions import WebDriverException
+from selenium.common.exceptions import ElementClickInterceptedException
+
+import pandas as pd
 from exceptions import WrongDomainSyntax, DomainNoIp, ServerBlocked, SpiderError
 from IPython.core.debugger import Tracer; debughere = Tracer()
 from selenium.webdriver.firefox.options import Options
 import operator
 from functools import reduce
-import urllib3
-import urllib3.exceptions as urllib3_exc
 import pickle
 import itertools
 import pprint
@@ -22,6 +24,10 @@ import uuid
 import sys
 import ast
 
+
+from sqlalchemy import create_engine
+import base64
+import requests
 from utility import eval_url, join_url, checkdir, checkfile, url_to_filename, change_useragent
 from misc.settings import raas_dictconfig
 from misc.settings import bcolors
@@ -74,14 +80,13 @@ class Spider(threading.Thread):
 
         if not os.getcwd() in os.environ["PATH"]:
             os.environ["PATH"] += os.pathsep + os.getcwd()
-        
+
         # Preparing Config and Logger
         dictConfig(raas_dictconfig)
         self.lgg = logging.getLogger("scrapespider")
 
         # Preparing Selenium Browser and urllib3 client
         self.br = []
-        self.httpreq = urllib3.PoolManager()
 
         # Init some variables for runtime      
         self.last_visited= ""
@@ -230,21 +235,6 @@ class Spider(threading.Thread):
             cs = bcolors.HEADER
 
         if result_entry != None:
-            print('''Returned from crawl:
-                {cs}Result:{result}
-                Status:{status}
-                URL:{url}
-                Type:{crawl_type}
-                From:{from_attrib}
-                Request:{request_type}{ce}'''.format(    cs=cs,
-                                                    ce=bcolors.ENDC,
-                                                    url=result_entry["url"],
-                                                    status=result_entry["status"],
-                                                    result=result_entry["result"],
-                                                    crawl_type=result_entry["type"],
-                                                    from_attrib=result_entry["from_attrib"],
-                                                    request_type=result_entry["request_type"]))
-
             self.lgg.info('''Returned from crawl:
                 {cs}Result:{result}
                 Status:{status}
@@ -338,17 +328,58 @@ class Spider(threading.Thread):
 
     def parse_slider_articles(self, result_dict):
 
-        ac = ActionChains(self.br)
-        button = self.br.find_elements_by_xpath("//button[@data-js-item='load-more-btn']")
-        ac.move_to_element(button[0]).click().perform()
-        soup = self.parse_html_to_bs(self.br.page_source)
-        soup.find_all("div",{"class":"teaser-collage__teaser-wrapper"})
         if result_dict['page_source']:
-            bsoup = self.parse_html_to_bs(result_dict['page_source'])
-            debughere()
-            result = bsoup.find_all("a",{"class":"slider__list"}) 
-            print(result)
+            time.sleep(1)
+            button = self.br.find_elements_by_xpath("//button[@data-js-item='load-more-btn']")
+            try:
+                button[0].click()
+            except ElementClickInterceptedException:
+                print("Obscured Button")
 
+            time.sleep(1)
+
+            ac = ActionChains(self.br)
+            ac.move_to_element(button[0]).click().perform()
+
+            time.sleep(1)
+
+            [button[0].click() for i in range(5)]
+
+            time.sleep(1)
+
+            soup = self.parse_html_to_bs(self.br.page_source)
+            all_articles = soup.find_all("div",{"class":"teaser-collage__teaser-wrapper"})
+            articles_dict = {}
+            for index, article in enumerate(all_articles):
+                ta = {}
+                date_loc = article.find_all("li","teaser-info__item")
+                try:
+                    ta["date"] = date_loc[0].time.get('datetime','')
+                except:
+                    ta["date"] = ""
+                try:
+                    ta["loc"] =  date_loc[1].text
+                except:
+                    ta["loc"] = ""
+
+                link_headline = article.find_all("a",{"class":"teaser-tile__headline-link"})
+                ta["headline"] = link_headline[0].text.strip()
+                ta["link"] = link_headline[0].get('href','')
+
+                image_set = article.find_all("source")
+                image = image_set[0].get("data-srcset","").split(" ")[0]
+                ta["image_b64"] = base64.b64encode(requests.get(image).content)
+                articles_dict[index] = ta
+
+            df = pd.DataFrame(articles_dict).T
+
+            self.write_db("bwde_articles", df)
+        return result_dict
+
+
+    def write_db(self, table_name, df):
+        engine = create_engine('sqlite:///'+ self.base_dir + '/bwscrape.db')
+        df.to_sql(table_name, engine, index=False, if_exists="replace")
 
     def check_visit(self, new_link, request):
         if not any(vis["link"] == new_link for vis in self.visited):
@@ -429,5 +460,5 @@ class Spider(threading.Thread):
 
 if __name__ == "__main__":
     # bundeswehr.de spider
-    spider = Spider(env="",limit=10)
-    spider.run(url="https://bundeswehr.de/reserve")
+    spider = Spider(env="")
+    spider.run("https://www.bundeswehr.de")
