@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # coding: utf-8
-from flask import Flask, Blueprint
+from flask import Flask, Blueprint, jsonify
 from sqlalchemy import create_engine
 import pandas as pd
 
@@ -16,7 +16,7 @@ def getarticles():
     engine = create_engine('sqlite:///scrapeoutput/bwscrape.db')
     df = pd.read_sql_table('bwde_articles', engine)
 
-    return df.to_json(orient="index")
+    return jsonify(df.to_json(orient="index"))
 
 app = Flask(__name__)
 app.register_blueprint(bp, url_prefix='/resbw')
