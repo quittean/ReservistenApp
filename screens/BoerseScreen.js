@@ -2,8 +2,30 @@ import React from 'react';
 import { Component } from 'react';
 import { ImageBackground, SafeAreaView, View, FlatList, StyleSheet, Text } from 'react-native';
 import Constants from 'expo-constants';
+import { Linking, WebBrowser } from 'expo';
 import { TouchableOpacity } from 'react-native-gesture-handler';
+import { WebView} from 'react-native-webview';
 
+
+
+
+export default class BoerseScreen extends Component {
+    render() {
+        return (
+        <WebView
+            source={{uri: 'https://bewerbung.bundeswehr-karriere.de/erece/portal/index.html#/JobList/milGroup/TwoColumnsMidExpanded/?json=%257B%2522Langu%2522:%2522D%2522,%2522SearchCategory%2522:%255B%25220022%2522%255D%257D'}}
+            style={{marginTop: 20}}
+        />
+        )
+    }
+}
+
+
+
+
+
+
+/*
 const DATA = [
   {
     id: 'A763012AA-2020-00000760-E',
@@ -72,14 +94,39 @@ const DATA = [
 
 
 export default class BoerseScreen extends Component {
+    
+    state={
+        showWebView: false
+    }
+
+    onNavigationStateChange = navState => {
+        if (navState.url.indexOf('https://www.google.com') === 0) {
+        const regex = /#access_token=(.+)/;
+        const accessToken = navState.url.match(regex)[1];
+        console.log(accessToken);
+      }
+    };
+
+
+    renderContent() {
+        return (
+          <WebView
+            source={{
+              uri: 'https://google.de'
+           }}
+          />
+        );
+    }
+
     render() {
         return (
             <ImageBackground source={require('../assets/background.jpg')} style={{width: '100%', height: '100%'}}>
                 <SafeAreaView style={styles.container}>
+                { this.state.showWebView && this.renderContent() }
                 <FlatList
                     data={DATA}
                     renderItem={({ item }) => (
-                        <TouchableOpacity onPress= {() => alert(item.id)}>
+                        <TouchableOpacity onPress= { () => this.setState({showWebView: true})}>
                             <View style={styles.listItem}>
                                 <Text style={styles.title}>
                                     {item.title}
@@ -98,7 +145,15 @@ export default class BoerseScreen extends Component {
             </ImageBackground>
         );
     }
+    _openWebView = () => {  
+        render(            <WebView
+            source={{uri: 'https://bewerbung.bundeswehr-karriere.de/erece/portal/index.html#/JobList/milGroup/TwoColumnsMidExpanded/?json=%257B%2522Langu%2522:%2522D%2522,%2522SearchCategory%2522:%255B%25220022%2522%255D%257D'}}
+            style={{marginTop: 20}}
+        />);
+    }
 }
+
+
 
 const styles = StyleSheet.create({
   container: {
@@ -115,3 +170,4 @@ const styles = StyleSheet.create({
     color: '#02b',
   },
 });
+*/
