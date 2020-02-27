@@ -12,15 +12,16 @@ export default class OrganisationScreen extends Component {
       <View style={{padding:20, flexDirection:'column'}}>
 
       <View style={{alignItems: 'center', justifyContent: 'center' }}>
-        <Text style={{color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>Wer gestaltet die Reserve? {"\n"}Welche Grundlagen und Gesetze haben Einfluss auf die Reserve?{"\n"} Antworten und weitere Informationen finden Sie hier!</Text>
         <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:22,textAlign:'center'}}>Die Organisation der Reserve</Text>
         <Text style={{paddingTop:10,color:'white',textAlign:'center'}}>Die Konzeption der Bundeswehr und die Strategie der Reserve bilden die Grundlage für Planung und Organisation der Reserve. Die Strategie der Reserve bildet den Rahmen für den Dialog zwischen</Text>
-        <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>Bundeswehr,</Text>
-        <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>den Reservistinnen und Reservisten,</Text>
-        <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>den Arbeitgeberinnen und Arbeitgebern</Text>
-        <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>sowie</Text>
-        <Text style={{paddingTop:10,color:'white',textAlign:'center'}}>den in der Reservistenarbeit tätigen Verbänden und Vereinigungen. Reservistenangelegenheiten sind eine Führungsaufgabe. Personalentwicklung, Ausbildung und Bindung von Reservistinnen und Reservisten an die Bundeswehr nehmen Vorgesetzte in die Pflicht. Hierzu setzen alle Dienststellenleiterinnen oder Dienststellenleiter bis zur Bataillonsebene eine Beauftragte oder einen Beauftragten für die Reservistenarbeit ein.</Text>
-        <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>Weiter interessante Informationen finden Sie in den unter aufgeführten Links.</Text>
+        <View>
+          <Text style={{paddingTop:10,paddingLeft:20,paddingRight:5,color:'white', fontWeight:'bold', fontSize:17,textAlign:'left'}}>{'\u2022' + " der Bundeswehr,"}</Text>
+          <Text style={{paddingTop:10,paddingLeft:20,paddingRight:5,color:'white', fontWeight:'bold', fontSize:17,textAlign:'left'}}>{'\u2022' + " den Reservistinnen und Reservisten,"}</Text>
+          <Text style={{paddingTop:10,paddingLeft:20,paddingRight:5,color:'white', fontWeight:'bold', fontSize:17,textAlign:'left'}}>{'\u2022' + " den Arbeitgeberinnen und Arbeitgebern sowie"}</Text>
+          <Text style={{paddingTop:10,paddingLeft:20,paddingRight:5,color:'white', fontWeight:'bold', fontSize:17,textAlign:'left'}}>{'\u2022' + " den in der Reservistenarbeit tätigen Verbänden und Vereinigungen."}</Text>
+        </View>
+        <Text style={{paddingTop:10,color:'white',textAlign:'center'}}>Reservistenangelegenheiten sind eine Führungsaufgabe. Personalentwicklung, Ausbildung und Bindung von Reservistinnen und Reservisten an die Bundeswehr nehmen Vorgesetzte in die Pflicht. Hierzu setzen alle Dienststellenleiterinnen oder Dienststellenleiter bis zur Bataillonsebene eine Beauftragte oder einen Beauftragten für die Reservistenarbeit ein.</Text>
+        <Text style={{paddingTop:10,color:'white', fontWeight:'bold', fontSize:17,textAlign:'center'}}>Weitere Informationen finden Sie in den unten aufgeführten Links:</Text>
       </View>
 
       <View style={{paddingTop:20, alignItems:'center'}}>
@@ -43,7 +44,7 @@ export default class OrganisationScreen extends Component {
              <Image style={{}} source={require('../assets/very_small_strategie.png')} />            
            </View>
            <View style={{justifyContent:'center', width:'60%'}}>
-              <Text style={{color:'white'}}>Kompetenzzetrum {"\n"}für Reservisten-{"\n"}angelegenheiten</Text>
+              <Text style={{color:'white'}}>Kompetenzzentrum {"\n"}für Reservisten-{"\n"}angelegenheiten</Text>
            </View>
            </TouchableOpacity>
           </View>
