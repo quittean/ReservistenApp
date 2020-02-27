@@ -18,6 +18,9 @@ import LinkAktuellesBwScreen from './screens/Link_Aktuelles_BwScreen';
 import LinkReserveangelegenheitenOrgaScreen from './screens/Link_Reserveangelegenheiten_OrgaScreen';
 import LinkKompetenzzentrumOrgaScreen from './screens/Link_Kompetenzzentrum_OrgaScreen';
 import LinkGrundlagenOrgaScreen from './screens/Link_Grundlagen_OrgaScreen';
+import LinkStrategieOrgaScreen from './screens/Link_Strategie_OrgaScreen';
+import VerbandScreen from './screens/VerbandScreen';
+import LinkMagazinVerbandScreen from './screens/Link_Magazin_VerbandScreen';
 
 
 const Stack = createStackNavigator();
@@ -30,6 +33,7 @@ function App() {
         <Stack.Screen name="Cal" component={CalScreen} options={{title: 'Veranstaltungen', headerTitleAlign:'center'}}/>
         <Stack.Screen name="Bw" component={BwScreen} options={{title: 'Die Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Boerse" component={BoerseScreen} options={{title: 'Stellenbörse',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Verband" component={VerbandScreen} options={{title: 'Reservistenverband',headerTitleAlign:'center'}}/>
 
         <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} options={{title: 'Der Auftrag der Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} options={{title: 'Organisation',headerTitleAlign:'center'}}/>
@@ -40,6 +44,8 @@ function App() {
         <Stack.Screen name="Link_Reserveangelegenheiten_OrgaScreen" component={LinkReserveangelegenheitenOrgaScreen} options={{title: 'Reserveangelegenheiten',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Kompetenzzentrum_OrgaScreen" component={LinkKompetenzzentrumOrgaScreen} options={{title: 'Kompetenzzentrum Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Grundlagen_OrgaScreen" component={LinkGrundlagenOrgaScreen} options={{title: 'Grundlagen & Gesetze',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Strategie_OrgaScreen" component={LinkStrategieOrgaScreen} options={{title: 'Strategie der Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Magazin_VerbandScreen" component={LinkMagazinVerbandScreen} options={{title: 'Magazin - die Reserve',headerTitleAlign:'center'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

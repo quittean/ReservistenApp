@@ -11,13 +11,13 @@ export default class BwScreen extends Component {
     return (
       
       <ImageBackground source={require('../assets/background.jpg')} style={{width: '100%', height: '100%'}}>
-      <View style={{flex: 1, flexDirection: 'column',padding: 20,alignItems: 'center', justifyContent:'center'}}>
+      <View style={{flex: 1, flexDirection: 'column',alignItems: 'center', justifyContent:'center'}}>
 
       <View style={{padding: 10, width: '100%', paddingTop: 200}}>
         <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Aktuelles_BwScreen')}>
-          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.90)',alignItems: 'center', padding: 10}}>
             
-             <Text style={{textAlign:'center',color:'white', fontSize:22, fontWeight:'bold'}}>Aktuelles</Text>
+             <Text style={{textAlign:'center',color:'black', fontSize:22}}>Aktuelles</Text>
              
          </View>
          </TouchableOpacity> 
@@ -25,9 +25,9 @@ export default class BwScreen extends Component {
 
         <View style={{padding: 10, width: '100%'}}>
         <TouchableOpacity style={{}} onPress= {() => this.props.navigation.navigate('Link_Menschen_BwScreen')}>
-          <View style={{justifyContent:'center',backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+          <View style={{justifyContent:'center',backgroundColor:'rgba(255,255,255, 0.90)',alignItems: 'center', padding: 10}}>
             
-            <Text style={{textAlign:'center',color:'white', fontSize:22, fontWeight:'bold'}}>Menschen</Text>
+            <Text style={{textAlign:'center',color:'black', fontSize:22}}>Menschen</Text>
             
           </View>
           </TouchableOpacity> 
@@ -35,9 +35,9 @@ export default class BwScreen extends Component {
 
         <View style={{padding: 10, width: '100%'}}>
         <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Link_Auftrag_BwScreen')}>
-          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.90)',alignItems: 'center', padding: 10}}>
             
-            <Text style={{textAlign:'center',color:'white', fontSize:22, fontWeight:'bold'}}>Auftrag</Text>
+            <Text style={{textAlign:'center',color:'black', fontSize:22}}>Auftrag</Text>
            
           </View>
           </TouchableOpacity>
@@ -45,9 +45,9 @@ export default class BwScreen extends Component {
 
         <View style={{padding: 10, width: '100%'}}>
         <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Organisation_BwScreen')}>
-          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.90)',alignItems: 'center', padding: 10}}>
             
-            <Text style={{textAlign:'center',color:'white', fontSize:22, fontWeight:'bold'}}>Organisation</Text>
+            <Text style={{textAlign:'center',color:'black', fontSize:22}}>Organisation</Text>
           
           </View>
           </TouchableOpacity> 
@@ -55,9 +55,9 @@ export default class BwScreen extends Component {
 
         <View style={{padding: 10, width: '100%'}}>
         <TouchableOpacity onPress= {() => this.props.navigation.navigate('Reservist_BwScreen')}>
-          <View style={{justifyContent:'center',backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+          <View style={{justifyContent:'center',backgroundColor:'rgba(255,255,255, 0.90)',alignItems: 'center', padding: 10}}>
           
-            <Text style={{textAlign:'center',color:'white', fontSize:22, fontWeight:'bold'}}>Reservist werden</Text>
+            <Text style={{textAlign:'center',color:'black', fontSize:22}}>Reservist werden</Text>
             
           </View>
           </TouchableOpacity>

@@ -8,24 +8,24 @@ export default class StartScreen extends Component {
   render() {
     return (
       <ImageBackground source={require('../assets/background.jpg')} style={{width: '100%', height: '100%'}}>
-      <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }}>
+      <View style={{ height: '100%',flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }}>
 
-          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Bw')}>
+          <TouchableOpacity style={{height:65,backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Bw')}>
             <Image style={styles.icon} source={require('../assets/iconbw.png')} />
             <Text style={styles.buttonText}>Informationen</Text>
           </TouchableOpacity>
         
-          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => { Linking.openURL('https://bundeswehr.community')}}>
-            <Image style={styles.icon} source={require('../assets/iconcommunity.png')} />
+          <TouchableOpacity style={{height:65,backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => { Linking.openURL('https://bundeswehr.community')}}>
+            <Image style={styles.iconcom} source={require('../assets/iconcommunity.png')} />
             <Text style={styles.buttonText}>Bw Community</Text>
           </TouchableOpacity>
         
-          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Boerse')}>
+          <TouchableOpacity style={{height:65,backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Boerse')}>
             <Image style={styles.icon} source={require('../assets/iconboerse.png')} />
             <Text style={styles.buttonText}>Stellenbörse</Text>
           </TouchableOpacity>          
         
-          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Cal')}>
+          <TouchableOpacity style={{height:65,backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Verband')}>
             <Image style={styles.icon} source={require('../assets/iconcal.png')} />
             <Text style={styles.buttonText}>Reservistenverband</Text>
           </TouchableOpacity>
@@ -46,6 +46,13 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     alignSelf: "center",
     margin: 5,
+  },
+  iconcom: {
+    width: 65,
+    height: 65,
+    resizeMode: 'contain',
+    alignSelf: "center",
+    
   },
   buttonText: {
     fontSize: 27,
