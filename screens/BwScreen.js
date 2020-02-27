@@ -31,31 +31,31 @@ export default class BwScreen extends Component {
         </View>  
 
         <View style={{padding: 20, width: '70%' }}>
-          <View style={{justifyContent:'center',backgroundColor:'white',alignItems: 'center', padding: 10, borderColor:'black', borderWidth:1}}>
+          <View style={{justifyContent:'center',alignItems: 'center', padding: 10, borderColor:'#13239D', borderWidth:2}}>
             <TouchableOpacity style={{}} onPress= {() => this.props.navigation.navigate('Link_Menschen_BwScreen')}>
-            <Text style={{textAlign:'center',color:'black'}}>Die Menschen</Text>
+            <Text style={{textAlign:'center',color:'#13239D',fontSize:20, fontWeight:'bold'}}>Die Menschen</Text>
             </TouchableOpacity> 
           </View>
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center', backgroundColor:'white',alignItems: 'center', padding: 10, borderColor:'black', borderWidth:1}}>
+          <View style={{justifyContent:'center',alignItems: 'center', padding: 10, borderColor:'white', borderWidth:2}}>
            <TouchableOpacity onPress= {() => this.props.navigation.navigate('Reservist_BwScreen')}>
-            <Text style={{textAlign:'center',color:'black'}}>Reservist werden!</Text>
+            <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Reservist werden!</Text>
            </TouchableOpacity> 
           </View>
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center', backgroundColor:'white',alignItems: 'center', padding: 10, borderColor:'black', borderWidth:1}}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(0, 0, 0, 0.65)',alignItems: 'center', padding: 10, borderColor:'black', borderWidth:1}}>
             <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Aktuelles_BwScreen')}>
-             <Text style={{textAlign:'center',color:'black'}}>Aktuelles</Text>
+             <Text style={{textAlign:'center',color:'white'}}>Aktuelles</Text>
              </TouchableOpacity> 
          </View>
         </View>
 
-        <View style={{height:700, justifyContent:'center', alignItems:'center'}}>
-        <Text style={{color:'white'}}>Blog-Einträge und co</Text>
+        <View style={{height:250, justifyContent:'center', alignItems:'center'}}>
+        
         </View>
 
       </View>
