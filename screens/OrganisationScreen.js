@@ -38,7 +38,7 @@ export default class OrganisationScreen extends Component {
 
         <View style={{paddingTop:10}}>
           <View style={{borderColor:'white', borderWidth:1,justifyContent:'space-evenly', flexDirection: 'row', width:'85%'}}>
-          <TouchableOpacity style={{flexDirection:'row'}} onPress= {() => this.props.navigation.navigate('Link_Kompentenzzentrum_OrgaScreen')}>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress= {() => this.props.navigation.navigate('Link_Kompetenzzentrum_OrgaScreen')}>
             <View style={{justifyContent:'center', width:'40%'}}>           
              <Image style={{}} source={require('../assets/very_small_strategie.png')} />            
            </View>
