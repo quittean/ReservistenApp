@@ -15,6 +15,9 @@ import ReservistScreen from './screens/ReservistScreen';
 import LinkAuftragBwScreen from './screens/Link_Auftrag_BwScreen';
 import LinkMenschenBwScreen from './screens/Link_Menschen_BwScreen';
 import LinkAktuellesBwScreen from './screens/Link_Aktuelles_BwScreen';
+import LinkReserveangelegenheitenOrgaScreen from './screens/Link_Reserveangelegenheiten_OrgaScreen';
+import LinkKompetenzzentrumrgaScreen from './screens/Link_Kompetenzzentrum_OrgaScreen';
+import LinkGrundlagenOrgaScreen from './screens/Link_Grundlagen_OrgaScreen';
 
 
 const Stack = createStackNavigator();
@@ -34,6 +37,9 @@ function App() {
         <Stack.Screen name="Link_Auftrag_BwScreen" component={LinkAuftragBwScreen} options={{title: 'Mehr Infos zum Auftrag',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Menschen_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Menschen in der Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkAktuellesBwScreen} options={{title: 'Aktuelles aus der Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Reserveangelegenheiten_OrgaScreen" component={LinkReserveangelegenheitenOrgaScreen} options={{title: 'Reserveangelegenheiten',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Kompetenzzentrum_OrgaScreen" component={LinkKompetenzzentrumrgaScreen} options={{title: 'Kompetenzzentrum Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Grundlagen_OrgaScreen" component={LinkGrundlagenOrgaScreen} options={{title: 'Grundlagen & Gesetze',headerTitleAlign:'center'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
