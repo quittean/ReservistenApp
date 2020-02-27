@@ -23,7 +23,7 @@ export default class BwScreen extends Component {
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center', backgroundColor:'white',alignItems: 'center', padding: 10,  borderColor:'black', borderWidth:1}}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10,  borderColor:'black'}}>
             <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Organisation_BwScreen')}>
             <Text style={{textAlign:'center', color:'black'}}>Die Organisation</Text>
             </TouchableOpacity> 
@@ -47,7 +47,7 @@ export default class BwScreen extends Component {
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center', backgroundColor:'rgba(0, 0, 0, 0.65)',alignItems: 'center', padding: 10, borderColor:'black', borderWidth:1}}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(0, 0, 0, 0.65)',alignItems: 'center', padding: 10, borderColor:'black'}}>
             <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Aktuelles_BwScreen')}>
              <Text style={{textAlign:'center',color:'white'}}>Aktuelles</Text>
              </TouchableOpacity> 
