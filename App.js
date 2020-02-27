@@ -33,7 +33,7 @@ function App() {
         <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} options={{title: 'Reservist werden!',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Auftrag_BwScreen" component={LinkAuftragBwScreen} options={{title: 'Mehr Infos zum Auftrag',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Menschen_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Menschen in der Reserve',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Aktuelles aus der Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkAktuellesBwScreen} options={{title: 'Aktuelles aus der Reserve',headerTitleAlign:'center'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
