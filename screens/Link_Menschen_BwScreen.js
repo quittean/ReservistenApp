@@ -35,12 +35,16 @@ export default class LinkMenschenBwScreen extends Component {
             
             var main = document.getElementById("r-main");
             var alsReservist;
+            var weitereInfos;
             for (i = 0; i<main.children.length; i++){
               for (j = 0; j<main.children[i].children.length; j++){
                 for (k = 0; k<main.children[i].children[j].children.length; k++){
                   if (main.children[i].children[j].children[k].tagName == "H2"){
                       if (main.children[i].children[j].children[k].innerHTML.includes("Als Reservist bei der Bundeswehr")){
                         alsReservist = i;
+                      }
+                      if (main.children[i].children[j].children[k].innerHTML.includes("Weitere Informationen")){
+                        weitereInfos = i;
                       }
                   }
                 }
@@ -49,6 +53,9 @@ export default class LinkMenschenBwScreen extends Component {
             if (alsReservist > -1){
               main.removeChild(main.children[alsReservist]);
             }
+            if (weitereInfos > -1){
+                main.removeChild(main.children[weitereInfos]);
+              }
             
 
             removeElementsByClass("c-share-page c-share-page--default is-static");
