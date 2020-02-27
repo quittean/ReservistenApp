@@ -15,43 +15,53 @@ export default class BwScreen extends Component {
 
         
         <View style={{padding: 20, width:'70%',}}>
-          <View style={{justifyContent:'center', backgroundColor:'white', alignItems: 'center', padding: 10, borderColor:'black', borderWidth:1}}>
-            <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Auftrag_BwScreen')}>
-            <Text style={{textAlign:'center', color:'black'}}>Der Auftrag</Text>
-            </TouchableOpacity>
+        <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Link_Auftrag_BwScreen')}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+            
+            <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Der Auftrag</Text>
+           
           </View>
+          </TouchableOpacity>
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10,  borderColor:'black'}}>
-            <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Organisation_BwScreen')}>
-            <Text style={{textAlign:'center', color:'black'}}>Die Organisation</Text>
-            </TouchableOpacity> 
+        <TouchableOpacity  onPress= {() => this.props.navigation.navigate('Organisation_BwScreen')}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+            
+            <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Die Organisation</Text>
+          
           </View>
+          </TouchableOpacity> 
         </View>  
 
         <View style={{padding: 20, width: '70%' }}>
-          <View style={{justifyContent:'center',alignItems: 'center', padding: 10, borderColor:'#13239D', borderWidth:2}}>
-            <TouchableOpacity style={{}} onPress= {() => this.props.navigation.navigate('Link_Menschen_BwScreen')}>
-            <Text style={{textAlign:'center',color:'#13239D',fontSize:20, fontWeight:'bold'}}>Die Menschen</Text>
-            </TouchableOpacity> 
+        <TouchableOpacity style={{}} onPress= {() => this.props.navigation.navigate('Link_Menschen_BwScreen')}>
+          <View style={{justifyContent:'center',backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+            
+            <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Die Menschen</Text>
+            
           </View>
+          </TouchableOpacity> 
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center',alignItems: 'center', padding: 10, borderColor:'white', borderWidth:2}}>
-           <TouchableOpacity onPress= {() => this.props.navigation.navigate('Reservist_BwScreen')}>
+        <TouchableOpacity onPress= {() => this.props.navigation.navigate('Reservist_BwScreen')}>
+          <View style={{justifyContent:'center',backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+          
             <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Reservist werden!</Text>
-           </TouchableOpacity> 
+            
           </View>
+          </TouchableOpacity>
         </View>
 
         <View style={{padding: 20, width: '70%'}}>
-          <View style={{justifyContent:'center', backgroundColor:'rgba(0, 0, 0, 0.65)',alignItems: 'center', padding: 10, borderColor:'black'}}>
-            <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Aktuelles_BwScreen')}>
-             <Text style={{textAlign:'center',color:'white'}}>Aktuelles</Text>
-             </TouchableOpacity> 
+        <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Aktuelles_BwScreen')}>
+          <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.65)',alignItems: 'center', padding: 10}}>
+            
+             <Text style={{textAlign:'center',color:'white', fontSize:15, fontWeight:'bold'}}>Aktuelles</Text>
+             
          </View>
+         </TouchableOpacity> 
         </View>
 
         <View style={{height:250, justifyContent:'center', alignItems:'center'}}>
