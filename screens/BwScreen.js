@@ -43,6 +43,12 @@ export default class BwScreen extends Component {
           </View>
         </View>
 
+        <View style={{justifyContent:'center', backgroundColor:'white',alignItems: 'center', padding: 10, width: '40%', borderColor:'black', borderWidth:1}}>
+           <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Aktuelles_BwScreen')}>
+            <Text style={{textAlign:'center',color:'black'}}>Aktuelles</Text>
+           </TouchableOpacity> 
+        </View>
+
         <View style={{height:700, justifyContent:'center', alignItems:'center'}}>
         <Text style={{color:'white'}}>Blog-Einträge und co</Text>
         </View>

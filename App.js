@@ -14,6 +14,7 @@ import OrganisationScreen from './screens/OrganisationScreen';
 import ReservistScreen from './screens/ReservistScreen';
 import LinkAuftragBwScreen from './screens/Link_Auftrag_BwScreen';
 import LinkMenschenBwScreen from './screens/Link_Menschen_BwScreen';
+import LinkAktuellesBwScreen from './screens/Link_Aktuelles_BwScreen';
 
 
 const Stack = createStackNavigator();
@@ -25,13 +26,14 @@ function App() {
         <Stack.Screen name="Start" component={StartScreen} options={{title: 'Die Reservisten-App', headerTitleAlign:'center'}}/>
         <Stack.Screen name="Cal" component={CalScreen} options={{title: 'Veranstaltungen', headerTitleAlign:'center'}}/>
         <Stack.Screen name="Bw" component={BwScreen} options={{title: 'Die Reserve',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Boerse" component={BoerseScreen} options={{title: 'Stellenbörse'}}/>
+        <Stack.Screen name="Boerse" component={BoerseScreen} options={{title: 'Stellenbörse',headerTitleAlign:'center'}}/>
 
         <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} options={{title: 'Der Auftrag der Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} options={{title: 'Organisation',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} options={{title: 'Reservist werden!',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Auftrag_BwScreen" component={LinkAuftragBwScreen} options={{title: 'Mehr Infos zum Auftrag',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Menschen_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Menschen in der Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Aktuelles aus der Reserve',headerTitleAlign:'center'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
