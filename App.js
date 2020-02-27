@@ -16,7 +16,7 @@ import LinkAuftragBwScreen from './screens/Link_Auftrag_BwScreen';
 import LinkMenschenBwScreen from './screens/Link_Menschen_BwScreen';
 import LinkAktuellesBwScreen from './screens/Link_Aktuelles_BwScreen';
 import LinkReserveangelegenheitenOrgaScreen from './screens/Link_Reserveangelegenheiten_OrgaScreen';
-import LinkKompetenzzentrumrgaScreen from './screens/Link_Kompetenzzentrum_OrgaScreen';
+import LinkKompetenzzentrumOrgaScreen from './screens/Link_Kompetenzzentrum_OrgaScreen';
 import LinkGrundlagenOrgaScreen from './screens/Link_Grundlagen_OrgaScreen';
 
 
