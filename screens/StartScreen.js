@@ -8,34 +8,31 @@ export default class StartScreen extends Component {
   render() {
     return (
       <ImageBackground source={require('../assets/background.jpg')} style={{width: '100%', height: '100%'}}>
-      <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-        <View style={{alignItems: 'center'}}>
-          <Text style={{width: '100%', fontSize: 35, color: 'white'}}>Die Reservisten App</Text>
-        </View>
+      <View style={{ flex: 1, flexDirection: 'column', alignItems: 'center', justifyContent: 'space-evenly' }}>
 
-        <View style={{flexDirection: 'row', width: '80%', height: '40%', justifyContent: 'space-evenly', alignItems: 'center'}}>
-         <TouchableOpacity onPress= {() => this.props.navigation.navigate('Bw')}>
+          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Bw')}>
             <Image style={styles.icon} source={require('../assets/iconbw.png')} />
-            <Text style={styles.buttonText}>Die Reserve</Text>
+            <Text style={styles.buttonText}>Informationen</Text>
           </TouchableOpacity>
-          
-          <TouchableOpacity onPress= {() => this.props.navigation.navigate('Boerse')}>
-            <Image style={styles.icon} source={require('../assets/iconboerse.png')} />
-            <Text style={styles.buttonText}>Stellenangebote</Text>
-          </TouchableOpacity> 
-        </View>
-
-        <View style={{flexDirection: 'row', width: '80%', height: '40%', justifyContent: 'space-evenly', alignItems: 'center'}}>
-          <TouchableOpacity onPress= {() => this.props.navigation.navigate('Cal')}>
-            <Image style={styles.icon} source={require('../assets/iconcal.png')} />
-            <Text style={styles.buttonText}>Veranstaltungen</Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity onPress= {() => { Linking.openURL('https://bundeswehr.community')}}>
+        
+          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => { Linking.openURL('https://bundeswehr.community')}}>
             <Image style={styles.icon} source={require('../assets/iconcommunity.png')} />
             <Text style={styles.buttonText}>Bw Community</Text>
           </TouchableOpacity>
-        </View>
+        
+          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Boerse')}>
+            <Image style={styles.icon} source={require('../assets/iconboerse.png')} />
+            <Text style={styles.buttonText}>Stellenbörse</Text>
+          </TouchableOpacity>          
+        
+          <TouchableOpacity style={{backgroundColor:'rgba(255,255,255, 0.90)', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-around', width: '100%'}} onPress= {() => this.props.navigation.navigate('Cal')}>
+            <Image style={styles.icon} source={require('../assets/iconcal.png')} />
+            <Text style={styles.buttonText}>Reservistenverband</Text>
+          </TouchableOpacity>
+        
+
+
+
       </View>
       </ImageBackground>
     )
@@ -44,13 +41,14 @@ export default class StartScreen extends Component {
 
 const styles = StyleSheet.create({
   icon: {
-    width: '90%',
-    height: '80%',
+    width: 50,
+    height: 50,
     resizeMode: 'contain',
-    alignSelf: "center"
+    alignSelf: "center",
+    margin: 5,
   },
   buttonText: {
-    fontSize: 18,
-    color: 'white'
+    fontSize: 27,
+    color: 'black',
   },
 });
