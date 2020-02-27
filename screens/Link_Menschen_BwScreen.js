@@ -31,6 +31,26 @@ export default class LinkMenschenBwScreen extends Component {
             main.removeChild(main.lastChild);
             main.removeChild(main.lastChild);
 
+
+            
+            var main = document.getElementById("r-main");
+            var alsReservist;
+            for (i = 0; i<main.children.length; i++){
+              for (j = 0; j<main.children[i].children.length; j++){
+                for (k = 0; k<main.children[i].children[j].children.length; k++){
+                  if (main.children[i].children[j].children[k].tagName == "H2"){
+                      if (main.children[i].children[j].children[k].innerHTML.includes("Als Reservist bei der Bundeswehr")){
+                        alsReservist = i;
+                      }
+                  }
+                }
+              }
+            }
+            if (alsReservist > -1){
+              main.removeChild(main.children[alsReservist]);
+            }
+            
+
             removeElementsByClass("c-share-page c-share-page--default is-static");
             removeElementsByClass("c-share-page c-share-page--default is-on-top");
 
