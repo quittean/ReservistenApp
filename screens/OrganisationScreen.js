@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ImageBackground, TouchableOpacity,Button, View, Text,Image, } from 'react-native';
+import { ImageBackground, TouchableOpacity,Button, View, Text,Image,Linking } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -25,40 +25,40 @@ export default class OrganisationScreen extends Component {
 
       <View style={{paddingTop:20, alignItems:'center'}}>
 
-        <View style={{borderColor:'white', borderWidth:1, justifyContent:'space-evenly', flexDirection: 'row',width:'80%'}}>
-          <View style={{justifyContent:'center', width:'50%'}}>
-            <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Reserveangelegenheiten_OrgaScreen')}>
-            <Image style={{}} source={require('../assets/very_small_joachimruhle.png')} />
-            </TouchableOpacity>
+        <View style={{borderColor:'white', borderWidth:1, justifyContent:'space-evenly', flexDirection: 'row',width:'85%'}}>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress= {() => this.props.navigation.navigate('Link_Reserveangelegenheiten_OrgaScreen')}>
+          <View style={{justifyContent:'center', width:'40%'}}>           
+            <Image style={{}} source={require('../assets/very_small_joachimruhle.png')} />           
           </View>
-          <View style={{justifyContent:'center', width:'50%'}}>
-            <Text style={{color:'white'}}>Beauftragte für Reservistenangelegenheiten</Text>
+          <View style={{justifyContent:'center', width:'60%'}}>
+            <Text style={{color:'white'}}>Beauftragter{"\n"}für Reservisten- {"\n"}angelegenheiten</Text>
           </View>
+          </TouchableOpacity>
         </View>
 
         <View style={{paddingTop:10}}>
-          <View style={{borderColor:'white', borderWidth:1,justifyContent:'space-evenly', flexDirection: 'row', width:'80%'}}>
-            <View style={{justifyContent:'center', width:'50%'}}>
-             <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Kompentenzzentrum_OrgaScreen')}>
-             <Image style={{}} source={require('../assets/very_small_strategie.png')} />
-              </TouchableOpacity>
+          <View style={{borderColor:'white', borderWidth:1,justifyContent:'space-evenly', flexDirection: 'row', width:'85%'}}>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress= {() => this.props.navigation.navigate('Link_Kompentenzzentrum_OrgaScreen')}>
+            <View style={{justifyContent:'center', width:'40%'}}>           
+             <Image style={{}} source={require('../assets/very_small_strategie.png')} />            
            </View>
-           <View style={{justifyContent:'center', width:'50%'}}>
-              <Text style={{color:'white'}}>Kompetenzzetrum für Reservistenangelegenheiten</Text>
+           <View style={{justifyContent:'center', width:'60%'}}>
+              <Text style={{color:'white'}}>Kompetenzzetrum {"\n"}für Reservisten-{"\n"}angelegenheiten</Text>
            </View>
+           </TouchableOpacity>
           </View>
          </View>
 
         <View style={{paddingTop:10}}>
-          <View style={{borderColor:'white', borderWidth:1,justifyContent:'space-evenly', flexDirection: 'row', width:'80%'}}>
-            <View style={{justifyContent:'center', width:'50%'}}>
-              <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Grundlagen_OrgaScreen')}>
-              <Image style={{}} source={require('../assets/very_small_gesetze.png')} />
-             </TouchableOpacity>
+          <View style={{borderColor:'white', borderWidth:1,justifyContent:'space-evenly', flexDirection: 'row', width:'85%'}}>
+          <TouchableOpacity style={{flexDirection:'row'}} onPress= {() => { Linking.openURL('https://www.bundeswehr.de/de/ueber-die-bundeswehr/die-reserve-der-bundeswehr/organisation-der-reserve-der-bundeswehr/grundlagen-und-gesetze-fuer-die-reserve-der-bundeswehr')}}>
+            <View style={{justifyContent:'center', width:'40%'}}>          
+              <Image style={{}} source={require('../assets/very_small_gesetze.png')} />            
            </View>
-            <View style={{justifyContent:'center', width:'50%'}}>
+            <View style={{justifyContent:'center', width:'60%'}}>
               <Text style={{color:'white'}}>Grundlagen und Gesetze</Text>
             </View>
+            </TouchableOpacity>
          </View>
         </View>
 
