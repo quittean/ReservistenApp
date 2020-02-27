@@ -38,7 +38,7 @@ function App() {
         <Stack.Screen name="Link_Menschen_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Menschen in der Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkAktuellesBwScreen} options={{title: 'Aktuelles aus der Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Reserveangelegenheiten_OrgaScreen" component={LinkReserveangelegenheitenOrgaScreen} options={{title: 'Reserveangelegenheiten',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Link_Kompetenzzentrum_OrgaScreen" component={LinkKompetenzzentrumrgaScreen} options={{title: 'Kompetenzzentrum Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Kompetenzzentrum_OrgaScreen" component={LinkKompetenzzentrumOrgaScreen} options={{title: 'Kompetenzzentrum Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Grundlagen_OrgaScreen" component={LinkGrundlagenOrgaScreen} options={{title: 'Grundlagen & Gesetze',headerTitleAlign:'center'}}/>
       </Stack.Navigator>
     </NavigationContainer>
