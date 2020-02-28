@@ -41,15 +41,15 @@ export default class StartScreen extends Component {
 
 const styles = StyleSheet.create({
   icon: {
-    width: 50,
-    height: 50,
+    width: 55,
+    height: 55,
     resizeMode: 'contain',
     alignSelf: "center",
     margin: 5,
   },
   iconcom: {
-    width: 65,
-    height: 65,
+    width: 110,
+    height: 110,
     resizeMode: 'contain',
     alignSelf: "center",
     

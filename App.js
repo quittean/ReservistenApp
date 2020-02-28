@@ -29,23 +29,23 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Start">
-        <Stack.Screen name="Start" component={StartScreen} options={{title: 'Die Reservisten-App', headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Start" component={StartScreen} options={{title: 'Die App der Reserve', headerTitleAlign:'center'}}/>
         <Stack.Screen name="Cal" component={CalScreen} options={{title: 'Veranstaltungen', headerTitleAlign:'center'}}/>
         <Stack.Screen name="Bw" component={BwScreen} options={{title: 'Die Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Boerse" component={BoerseScreen} options={{title: 'Stellenbörse',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Verband" component={VerbandScreen} options={{title: 'Reservistenverband',headerTitleAlign:'center'}}/>
 
-        <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} options={{title: 'Der Auftrag der Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Auftrag_BwScreen" component={AuftragScreen} options={{title: 'Auftrag',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Organisation_BwScreen" component={OrganisationScreen} options={{title: 'Organisation',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} options={{title: 'Reservist werden!',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Link_Auftrag_BwScreen" component={LinkAuftragBwScreen} options={{title: 'Mehr Infos zum Auftrag',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Link_Menschen_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Menschen in der Reserve',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkAktuellesBwScreen} options={{title: 'Aktuelles aus der Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Reservist_BwScreen" component={ReservistScreen} options={{title: 'Reservist werden',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Auftrag_BwScreen" component={LinkAuftragBwScreen} options={{title: 'Auftrag',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Menschen_BwScreen" component={LinkMenschenBwScreen} options={{title: 'Menschen',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Aktuelles_BwScreen" component={LinkAktuellesBwScreen} options={{title: 'Aktuelles',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Reserveangelegenheiten_OrgaScreen" component={LinkReserveangelegenheitenOrgaScreen} options={{title: 'Reserveangelegenheiten',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Kompetenzzentrum_OrgaScreen" component={LinkKompetenzzentrumOrgaScreen} options={{title: 'Kompetenzzentrum Reserve',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Grundlagen_OrgaScreen" component={LinkGrundlagenOrgaScreen} options={{title: 'Grundlagen & Gesetze',headerTitleAlign:'center'}}/>
         <Stack.Screen name="Link_Strategie_OrgaScreen" component={LinkStrategieOrgaScreen} options={{title: 'Strategie der Reserve',headerTitleAlign:'center'}}/>
-        <Stack.Screen name="Link_Magazin_VerbandScreen" component={LinkMagazinVerbandScreen} options={{title: 'Magazin - die Reserve',headerTitleAlign:'center'}}/>
+        <Stack.Screen name="Link_Magazin_VerbandScreen" component={LinkMagazinVerbandScreen} options={{title: 'Magazin - die reserve',headerTitleAlign:'center'}}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -17,7 +17,7 @@ export default class VerbandScreen extends Component {
           <TouchableOpacity onPress= {() => this.props.navigation.navigate('Link_Magazin_VerbandScreen')}>
            <View style={{justifyContent:'center', backgroundColor:'rgba(255,255,255, 0.90)',alignItems: 'center', padding: 10}}>
             
-             <Text style={{textAlign:'center',color:'black', fontSize:22}}>Das Magazin</Text>
+             <Text style={{textAlign:'center',color:'black', fontSize:22}}>Das Magazin <Text style={{fontStyle: 'italic', fontSize:17}}>die reserve</Text></Text>
              
            </View>
           </TouchableOpacity> 
