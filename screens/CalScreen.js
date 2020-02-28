@@ -19,7 +19,7 @@ export default class CalScreen extends Component {
                 elements[0].parentNode.removeChild(elements[0]);
             }
           }
-          removeElementsByClass("main-nav");
+          removeElementsByClass("mobile-nav-toggle visible-xs-block visible-sm-block");
           removeElementsByClass("sidebar-widget sidebar-widget--veranstaltungen");
           removeElementsByClass("footer");
           removeElementsByClass("sticky-nav tab-nav text-uppercase");
